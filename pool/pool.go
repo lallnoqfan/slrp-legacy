@@ -268,7 +268,7 @@ func (pool *Pool) HttpGet(r *http.Request) (any, error) {
 			{"SOCKS4 proxies", socks4},
 			{"SOCKS5 proxies", socks5},
 		}
-	}, ql.DefaultOrder{ql.Desc("LastSeen")}, ql.DefaultLimit(20))
+	}, ql.DefaultOrder{ql.Desc("LastSeen")}, ql.DefaultLimit(10000))
 	return result, err
 }
 
